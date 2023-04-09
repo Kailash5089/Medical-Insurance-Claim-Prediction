@@ -22,7 +22,7 @@ target = 'insuranceclaim'
 
 # Create the sidebar for user input
 st.header('Medical Insurance Claim Prediction')
-image=Image.open(r"C:\Users\sandeep\Dropbox\internship\download.jpeg")
+
 
 
 age = st.slider('Age', 18, 100, 25)
