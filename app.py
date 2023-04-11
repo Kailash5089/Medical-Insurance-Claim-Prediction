@@ -21,7 +21,7 @@ from sklearn.model_selection import train_test_split
 st.set_page_config(page_title="Medical Insurance Claim Prediction")
 
 # Load the dataset
-data = pd.read_csv(r"C:\Users\sandeep\Dropbox\internship\I_C_DATA.csv")
+data = pd.read_csv("I_C_DATA.csv")
 
 # Define the features and target variable
 features = ['age', 'sex', 'bmi', 'steps', 'children', 'smoker', 'region', 'charges']
@@ -29,7 +29,6 @@ target = 'insuranceclaim'
 
 # Create the sidebar for user input
 st.header('Medical Insurance Claim Prediction')
-image=Image.open(r"C:\Users\sandeep\Dropbox\internship\download.jpeg")
 
 
 age = st.slider('Age', 18, 100, 25)
