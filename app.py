@@ -5,12 +5,7 @@ Created on Sun Apr  9 11:58:20 2023
 @author: G KAILASH KUMAR
 """
 
-# -*- coding: utf-8 -*-
-"""
-Created on Sun Apr  9 11:58:20 2023
 
-@author: G KAILASH KUMAR
-"""
 
 # Import necessary libraries
 import pandas as pd
