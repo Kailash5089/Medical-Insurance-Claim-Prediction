@@ -5,6 +5,13 @@ Created on Sun Apr  9 11:58:20 2023
 @author: G KAILASH KUMAR
 """
 
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Apr  9 11:58:20 2023
+
+@author: G KAILASH KUMAR
+"""
+
 # Import necessary libraries
 import pandas as pd
 import streamlit as st
@@ -14,7 +21,7 @@ from sklearn.model_selection import train_test_split
 st.set_page_config(page_title="Medical Insurance Claim Prediction")
 
 # Load the dataset
-data = pd.read_csv("I_C_DATA.csv")
+data = pd.read_csv(r"C:\Users\sandeep\Dropbox\internship\I_C_DATA.csv")
 
 # Define the features and target variable
 features = ['age', 'sex', 'bmi', 'steps', 'children', 'smoker', 'region', 'charges']
@@ -22,7 +29,7 @@ target = 'insuranceclaim'
 
 # Create the sidebar for user input
 st.header('Medical Insurance Claim Prediction')
-
+image=Image.open(r"C:\Users\sandeep\Dropbox\internship\download.jpeg")
 
 
 age = st.slider('Age', 18, 100, 25)
@@ -54,14 +61,25 @@ X_train, X_test, y_train, y_test = train_test_split(data[features], data[target]
 clf = RandomForestClassifier(n_estimators=100, random_state=42)
 clf.fit(X_train, y_train)
 
-# Make prediction
-prediction = clf.predict(user_input)
+# Create a predict button
+if st.button('Predict'):
+    # Make prediction
+    prediction = clf.predict(user_input)
 
 # Display the prediction
-if prediction[0] == 1:
-    st.success('He Can Claim Medical Insurance')
-else:
-    st.warning('He Cannot Claim Medical Insurance')
+    if prediction[0] == 1:
+        st.success('He Can Claim Medical Insurance')
+    else:
+        st.warning('He Cannot Claim Medical Insurance')
+
+
+
+
+
+
+
+
+
 
 
 
