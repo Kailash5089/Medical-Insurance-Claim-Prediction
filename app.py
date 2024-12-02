@@ -11,7 +11,7 @@ from sklearn.model_selection import train_test_split
 st.set_page_config(page_title="Medical Insurance Claim Prediction")
 
 # Load the dataset
-data = pd.read_csv("Medical-Insurance-Claim-Prediction-main\I_C_DATA.csv")
+data = pd.read_csv("I_C_DATA.csv")
 
 # Define the features and target variable
 features = ['age', 'sex', 'bmi', 'steps', 'children', 'smoker', 'region', 'charges']
